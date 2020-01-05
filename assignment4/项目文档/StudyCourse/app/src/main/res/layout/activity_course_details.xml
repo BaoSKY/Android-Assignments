@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.studycourse.vm.CourseViewHolder" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.CourseDetailsActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#D1E9E9">
+            <Button
+                android:id="@+id/bt_return"
+                android:onClick="onReturnClick"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:background="@drawable/ic_arrow_left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="课程详情"
+                android:textSize="20dp"
+                android:textColor="	#3C3C3C"
+                android:layout_marginLeft="100dp"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/container_margin"
+            android:layout_marginRight="@dimen/container_margin"
+            android:layout_marginBottom="@dimen/container_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/learning" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_course_id"
+                        android:text="@{viewModel.name}"
+                        android:textSize="30dp"/>
+
+                    <Button
+                        android:id="@+id/bt_share"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="300dp"
+                        android:background="@drawable/ic_share"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_teacher"
+                    android:text="@{viewModel.teacher}"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_school"
+                    android:text="@{viewModel.school}"
+                    android:textSize="23dp"/>
+
+                <TextView
+                    android:layout_marginTop="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_date"
+                    android:text="@{viewModel.time}"
+                    android:textSize="18dp"/>
+
+
+                <View
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#B0E0E6" />
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="课程介绍"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_description"
+                    android:text="@{viewModel.info}"/>
+
+                <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+                    android:id="@+id/jiecao_Player"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="470px" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/iv_course"
+                    android:layout_marginTop="15dp"
+                    />
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+</layout>

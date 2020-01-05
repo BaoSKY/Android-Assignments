@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:padding="10dp">
+
+
+
+    <ImageView
+        android:id="@+id/IV_list_Id"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/db"
+        android:background="@color/colorAccent"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TV_listTitle_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="安卓应用开发"
+            android:textSize="18dp"
+            android:textColor="#ff0000"/>
+
+        <TextView
+            android:id="@+id/TV_listTime_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="曾立刚"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/TV_listContext_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京交通大学"
+            android:textSize="16dp"
+            android:textColor="#ff9900" />
+
+    </LinearLayout>
+
+</LinearLayout>
